@@ -24,4 +24,5 @@ Since these are bold claims, I do hope that the government can manage their fund
 <strong><h3> My word/sentence/phrase after hearing the SONA: </h3></strong>
 Looking forward to what Marcos does.
 <br/>
-<img src=https://www.google.com/url?sa=i&url=https%3A%2F%2Fmanilastandard.net%2Fnews%2F314622563%2Frecent-floods-take-center-stage-at-marcos-sona-2025.html&psig=AOvVaw0H-D9AMu-G60uxEdGjrFYM&ust=1754235337148000&source=images&cd=vfe&opi=89978449&ved=0CBYQjRxqFwoTCPiAioO67I4DFQAAAAAdAAAAABAE width=500 height=250>
+
+![alt text](image.png)
