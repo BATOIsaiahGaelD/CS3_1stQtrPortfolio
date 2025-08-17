@@ -1,12 +1,28 @@
 <html>
     <body>
+        <h1>Snack Calculator</h1>
+        <label> Please put your current age <input id="age" /></label><br/>
+        <label> Please put your age you want to live to <input id="maxAge" /></label><br/>
+        <label> Please put the number of snacks you eat <input id="numPerDay" /></label><br/>
+
+        <button onclick="calculateSnacks()">Calculate Snacks</button>
+        <p> Result : 
+            <span id="totalRequired"></span>
+        </p>
         <script>
-            let age = 14;
-            let maxAge = 85
-            let numPerDay = 6;
-            let totalRequired = (numPerDay*365)*(maxAge-age);;
-            document.write(`You will need ${totalRequired} pieces of the biscuit Tiger to
-             last until your ripe old age of ${maxAge}`);
+            function calculateSnacks(){
+                let age = document.getElementById("age").value;
+                let maxAge = document.getElementById("maxAge").value;
+                let numPerDay = document.getElementById("numPerDay").value;
+                let confirm = window.confirm("Are you sure about everything you inputted?");
+                if (confirm){
+                    let totalRequired = (Number(numPerDay)*365)*(Number(maxAge)-Number(age));
+                    document.getElementById("totalRequired").innerHTML = `<b>You need ${totalRequired} snacks to survive until the ripe old age of ${maxAge}</b>`;
+                }
+                else{
+                    window.alert("Run again? Confirm if yes.");
+                }
+            }
         </script>
     </body>
 </html>
