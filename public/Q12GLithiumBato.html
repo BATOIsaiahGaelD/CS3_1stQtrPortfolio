@@ -12,7 +12,7 @@
     <button onclick = "totalMeal()">Confirm Numbers?</button>
 
     <p> Total Meal:
-        <span id="totalCost"></span>
+        <span id="tc"></span>
     </p>
     <script>
         function totalMeal() {
@@ -23,7 +23,8 @@
             let totalCost;
             totalCost = (parseFloat(mp) + parseFloat(tip) + 
             ((parseFloat(sc)/100)*parseFloat(mp)));
-            document.getElementById("totalCost").innerHTML = `<b> ${totalCost} </b>`;
+            let tc = totalCost.toFixed(2);
+            document.getElementById("tc").innerHTML = `<b> ${tc} </b>`;
          
         }
     </script>
