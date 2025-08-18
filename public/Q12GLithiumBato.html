@@ -5,12 +5,25 @@
     <h2> Q1 2nd Graded Exercise submitted by Isaiah Gael D. Bato of 9-Lithium </h2>
 
     <!-- Enter your tags below until the script tag -->
-    <label>Meal Price </label></br>
+    <label> Meal Price <input id="price"/></label></br>
+    <label> Tip <input id="tip"/></label></br>
+    <label> Service Change <input id="change"/></label></br>
 
+    <button onclick = "totalMeal()">Confirm Numbers?</button>
+
+    <p> Total Meal:
+        <span id="totalCost"></span>
+    </p>
     <script>
         function totalMeal() {
               // place your JS code here
-            
+            let mp = document.getElementById("price").value;
+            let tip = document.getElementById("tip").value;
+            let sc = document.getElementById("change").value;
+            let totalCost;
+            totalCost = (parseFloat(mp) + parseFloat(tip) + 
+            ((parseFloat(sc)/100)*parseFloat(mp)));
+            document.getElementById("totalCost").innerHTML = `<b> ${totalCost} </b>`;
          
         }
     </script>
