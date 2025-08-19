@@ -1,47 +1,42 @@
 <!DOCTYPE html>
 <html>
-<body>
+    <body>
 
-   <h2> Q1 3rd Graded Exercise submitted by Isaiah Gael D. Bato of 9-Lithium </h2>
-   <!-- Enter your HTML tags below  but before the opening script tag -->
-<p>
-Guess the number: **** <br/> <br/>
-The number is from 1 to 100 <br/>
-</p>
+        <h2> Q1 3rd Graded Exercise submitted by Isaiah Gael D. Bato of 9-Lithium </h2>
+        <!-- Enter your HTML tags below  but before the opening script tag -->
+        <p>
+            Guess the number: **** <br/> <br/>
+             The number is from 1 to 100 <br/>
+        </p>
+        <label>Enter your guess: <input id="guess"></input></label> <br/>
+        <button onclick="checkIt()"> Check it</button>
+        <p> Result:
+             <span id="result"></span>
+        </p>
+        <script>
+            var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
 
-<label>Enter your guess: <input id="guess"></input></label>
-
-<p>
-    <button onclick="checkIt()"> Check it</button>
-</p>
-
-<p> Result:
-    <span id="result"></span>
-</p>
-    <script>
-
-       var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
-       let guess = document.getElementById("guess").value;
-       let result;
-       document.write(dNumber);
-        function checkIt() {
-            if (parseInt(guess) < dNumber){
-                result = "Higher";
-                document.getElementById("result").innerHTML = `<b> ${result} <b>`;
+            function checkIt(){
+                let guess = document.getElementById("guess").value;
+                let result;
+                if (parseInt(guess) < placeHolder){
+                    result = "Higher";
+                    document.getElementById("result").innerHTML = `<b> ${result} </b>`;
+                }
+                else if (parseInt(guess) == placeHolder){
+                    result = "You are correct!";
+                    document.getElementById("result").innerHTML = `<b> ${result} </b>`;
+                }
+                else{
+                    result = "Lower";
+                    document.getElementById("result").innerHTML = `<b> ${result} </b>`;
+                }
             }
-             else if (parseInt(guess) == dNumber){
-                result = "You are correct!";
-                document.getElementById("result").innerHTML = `<b> ${result} <b>`;
-            }
-            else{
-                result = "Lower";
-                document.getElementById("result").innerHTML = `<b> ${result} <b>`;
-            }
-        }
-    </script>
-<p>
-    W3Schools.com. (n.d.-b). https://www.w3schools.com/js/js_if_else.asp
-</p>
-</body>
+        </script>
+    <p> References: <br/>
+        W3Schools.com. (n.d.-b). https://www.w3schools.com/js/js_if_else.asp <br/>
+        Bato, I. (2025). Q11stNGLithiumBato.html. Philippine Science High School
+    </p>
+    </body>
 
 </html>
