@@ -15,27 +15,24 @@
         </p>
         <script>
             var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
-
+            let answer = document.getElementById("guess").value;
+            let resultOf;
             function checkIt(){
-                let guess = document.getElementById("guess").value;
-                let result;
-                if (parseInt(guess) < placeHolder){
-                    result = "Higher";
-                    document.getElementById("result").innerHTML = `<b> ${result} </b>`;
+                if (Number(answer) == dNumber){
+                    resultOf = "You are correct!";
                 }
-                else if (parseInt(guess) == placeHolder){
-                    result = "You are correct!";
-                    document.getElementById("result").innerHTML = `<b> ${result} </b>`;
+                else if (Number(answer) < dNumber){
+                    resultOf = "Higher";
+                }else{
+                    resultOf = "Lower";
                 }
-                else{
-                    result = "Lower";
-                    document.getElementById("result").innerHTML = `<b> ${result} </b>`;
-                }
+                document.getElementById("result").innerHTML = `<b> ${resultOf} </b>`;
             }
         </script>
     <p> References: <br/>
         W3Schools.com. (n.d.-b). https://www.w3schools.com/js/js_if_else.asp <br/>
-        Bato, I. (2025). Q11stNGLithiumBato.html. Philippine Science High School
+        Bato, I. (2025). Q11stNGLithiumBato.html. Philippine Science High School <br/>
+        W3Schools.com. (n.d.-c). https://www.w3schools.com/jsref/met_document_getelementbyid.asp
     </p>
     </body>
 
